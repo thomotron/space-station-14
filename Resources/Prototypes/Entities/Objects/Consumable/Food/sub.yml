@@ -1,0 +1,132 @@
+# Sub loaf
+
+- type: entity
+  name: sub loaf
+  parent: FoodBreadBase
+  id: FoodSubLoaf
+  description: An empty sub. Long and inconvenient to hold.
+  components:
+  - type: Food
+  - type: Sprite
+    sprite: Objects/Consumable/Food/sub.rsi
+    state: empty
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 20
+        - ReagentId: Vitamin
+          Quantity: 5
+
+# Base
+
+- type: entity
+  parent: FoodInjectableBase
+  id: FoodSubBase
+  abstract: true
+  components:
+  - type: FlavorProfile
+    flavors:
+      - bread
+  - type: Food
+    transferAmount: 10
+  - type: Sprite
+    sprite: Objects/Consumable/Food/sub.rsi
+    netsync: true
+  - type: Item
+    sprite: Objects/Consumable/Food/sub.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 26
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 25
+        - ReagentId: Vitamin
+          Quantity: 7
+
+# Sub
+
+- type: entity
+  name: meatball sub
+  parent: FoodSubBase
+  id: FoodSubMeatball
+  description: A meatball sub. Saucy.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - bread
+      - meaty
+      - cheesy
+  - type: Sprite
+    sprite: Objects/Consumable/Food/sub.rsi
+    state: meatball
+# Tastes like bread, meat.
+
+- type: entity
+  name: pizza sub
+  parent: FoodSubBase
+  id: FoodSubPizza
+  description: No, it's not a calzone.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - bread
+      - cheesy
+      - tomato
+      - meaty
+  - type: Sprite
+    state: pizza
+# Tastes like bread, cheese, tomato, meat.
+
+- type: entity
+  name: steak sub
+  parent: FoodSubBase
+  id: FoodSubSteak
+  description: A steak sub.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - bread
+      - meaty
+      - cheesy
+      - tomato
+      - onion
+  - type: Sprite
+    state: steak
+# Tastes like bread, meat, cheese, tomato, onion.
+
+- type: entity
+  name: veggie sub
+  parent: FoodSubBase
+  id: FoodSubVeggie
+  description: Dragged it through the garden.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - bread
+      - tomato
+      - carrot
+      - mushroom
+      - spicy
+  - type: Sprite
+    state: veggie
+# Tastes like bread, plants, HEAT.
+
+- type: entity
+  name: chicken sub
+  parent: FoodSubBase
+  id: FoodSubChicken
+  description: Tastes like chicken. Who knew?
+  components:
+  - type: FlavorProfile
+    flavors:
+      - bread
+      - meaty
+      - tomato
+      - cheesy
+  - type: Sprite
+    state: chicken
+# Tastes like bread, chicken, tomato, cheese.

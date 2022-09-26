@@ -503,6 +503,76 @@
     Vodka: 5
   solids:
     FoodFlyAmanita: 3
+    
+# Subs
+
+- type: microwaveMealRecipe
+  id: RecipeSubbase
+  name: Sub Base
+  result: FoodSubLoaf
+  time: 15
+  solids:
+    FoodCakeBatter: 1
+    FoodAmbrosiaVulgaris: 1
+
+- type: microwaveMealRecipe
+  id: RecipeMeatballSub
+  name: Meatball Sub
+  result: FoodSubMeatball
+  time: 15
+  solids:
+    FoodSubLoaf: 1
+    FoodMeatMeatball: 2
+    FoodCheeseSlice: 1
+    FoodTomato: 1
+
+- type: microwaveMealRecipe
+  id: RecipePizzaSub
+  name: Pizza Sub
+  result: FoodSubPizza
+  time: 15
+  solids:
+    FoodSubLoaf: 1
+    FoodMeatCutlet: 2
+    FoodCheeseSlice: 1
+    FoodTomato: 1
+
+- type: microwaveMealRecipe
+  id: RecipeSteakSub    
+  name: Steak Sub
+  result: FoodSubSteak
+  time: 15
+  solids:
+    FoodSubLoaf: 1
+    FoodMeat: 2
+    FoodCheeseSlice: 1
+    FoodTomato: 1
+    FoodChili: 1
+    FoodOnionSlice: 1
+
+- type: microwaveMealRecipe
+  id: RecipeVeggieSub
+  name: Vegetable Sub
+  result: FoodSubVeggie
+  time: 15
+  solids:
+    FoodSubLoaf: 1
+    Foodcarrot: 1
+    FoodCheeseSlice: 1
+    FoodTomato: 1
+    FoodChili: 1
+    FoodMushroom: 1
+
+- type: microwaveMealRecipe
+  id: RecipeChickenSub    
+  name: Chicken Sub
+  result: FoodSubChicken
+  time: 15
+  solids:
+    FoodSubLoaf: 1
+    FoodMeatChicken: 1
+    FoodCheeseSlice: 1
+    FoodTomato: 1
 
 #Other
 - type: microwaveMealRecipe
